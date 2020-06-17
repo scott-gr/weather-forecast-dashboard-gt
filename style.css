@@ -6,3 +6,8 @@
 .searches {
   margin-top: 50px;
 }
+
+#searchBtn {
+  margin-top: 8px;
+  width: 100%;
+}
