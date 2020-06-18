@@ -71,27 +71,27 @@ $(document).ready(function () {
         var dayOneTemp = response.list[3].main.temp;
         var dayOneHum = response.list[3].main.humidity;
         var dayOneIcon = response.list[3].weather[0].icon;
-        var dayOneIconURL = "http://openweathermap.org/img/w/" + dayOneIconCode + ".png";
+        var dayOneIconURL = "http://openweathermap.org/img/w/" + dayOneIcon + ".png";
         /// Day 2
         var dayTwoTemp = response.list[11].main.temp;
         var dayTwoHum = response.list[11].main.humidity;
         var dayTwoIcon = response.list[11].weather[0].icon;
-        var dayTwoIconURL = "http://openweathermap.org/img/w/" + dayTwoIconCode + ".png";
+        var dayTwoIconURL = "http://openweathermap.org/img/w/" + dayTwoIcon + ".png";
        //// Day 3
         var dayThreeTemp = response.list[19].main.temp;
         var dayThreeHum = response.list[19].main.humidity;
         var dayThreeIcon = response.list[19].weather[0].icon;
-        var dayThreeIconURL = "http://openweathermap.org/img/w/" + dayThreeIconCode + ".png";
+        var dayThreeIconURL = "http://openweathermap.org/img/w/" + dayThreeIcon + ".png";
         /// Day 4
         var dayFourTemp = response.list[27].main.temp;
         var dayFourHum = response.list[27].main.humidity;
         var dayFourIcon = response.list[27].weather[0].icon;
-        var dayFourIconURL = "http://openweathermap.org/img/w/" + dayFourIconCode + ".png";
+        var dayFourIconURL = "http://openweathermap.org/img/w/" + dayFourIcon + ".png";
         //// Day 5
         var dayFiveTemp = response.list[35].main.temp;
         var dayFiveHum = response.list[35].main.humidity;
-        var dayFiveIconC = response.list[35].weather[0].icon;
-        var dayFiveIconURL = "http://openweathermap.org/img/w/" + dayFiveIconCode + ".png";
+        var dayFiveIcon = response.list[35].weather[0].icon;
+        var dayFiveIconURL = "http://openweathermap.org/img/w/" + dayFiveIcon + ".png";
         //Day 1 elements
         $("#temp-1").text("Temp: "+dayOneTemp);
         $("#hum-1").text("Humidity: "+dayOneHum+"%");
