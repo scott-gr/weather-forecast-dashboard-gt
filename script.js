@@ -11,7 +11,7 @@ $(document).ready(function () {
     apiKey;
   //today's date, to be displayed at top of Today element
   function getForecast(searchCity) {
-    var dateToday = moment().format('(M/D/YYYY'); //id is #today-date
+    var dateToday = moment().format('M/D/YYYY'); //id is #today-date
     $.ajax({
       url: queryURL,
       method: 'GET',
@@ -22,7 +22,8 @@ $(document).ready(function () {
       var humToday = response.main.humidity;
       var windsToday = response.wind.speed;
       var iconToday = response.weather[0].icon;
-      var iconTodayUrl = "http://openweathermap.org/img/w/" + iconToday + ".png";
+      var iconTodayUrl =
+        'http://openweathermap.org/img/w/' + iconToday + '.png';
       // // latitude and longitude needed for UV Index
       // var latToday = response.coord.lat;
       // var lonToday = response.coord.lon;
@@ -31,7 +32,28 @@ $(document).ready(function () {
       $('#temp-today').text('Temperature: ' + tempToday + ' F');
       $('#hum-today').text('Humidity: ' + humToday + '%');
       $('#winds-today').text('Wind: ' + windsToday + ' mph');
-      $("#icon-today").attr("src", iconTodayUrl);
+      $('#icon-today').attr('src', iconTodayUrl);
+
+
+      var dayOne = moment().add(1, 'days');
+      dayOne = dayOne.format("M/D/YYYY");
+      $('#day-one').text(dayOne);
+
+      var dayTwo = moment().add(2, 'days');
+      dayTwo = dayTwo.format("M/D/YYYY");
+      $('#day-two').text(dayTwo);
+
+      var dayThree = moment().add(3, 'days');
+      dayThree = dayThree.format("M/D/YYYY");
+      $('#day-three').text(dayThree);
+
+      var dayFour = moment().add(4, 'days');
+      dayFour = dayFour.format("M/D/YYYY");
+      $('#day-four').text(dayFour);
+
+      var dayFive = moment().add(5, 'days');
+      dayFive = dayFive.format("M/D/YYYY");
+      $('#day-five').text(dayFive);
     });
   }
   getForecast();
