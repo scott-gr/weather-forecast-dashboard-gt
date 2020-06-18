@@ -1,7 +1,7 @@
 $(document).ready(function () {
   //
 
-  var searchCity = '#search-city'; // change city to test
+  var searchCity = 'atlanta'; // change city to test
   var apiKey = '1935f5d7d75a269680ddfadd7b264dcb';
   // today forecast query and api key
   var queryURL =
@@ -93,25 +93,25 @@ $(document).ready(function () {
         var dayFiveIcon = response.list[35].weather[0].icon;
         var dayFiveIconURL = "http://openweathermap.org/img/w/" + dayFiveIcon + ".png";
         //Day 1 elements
-        $("#temp-1").text("Temp: "+dayOneTemp);
-        $("#hum-1").text("Humidity: "+dayOneHum+"%");
-        $("#icon-1").attr("src", dayOneIconURL);
+        $("#temp-one").text("Temp: "+dayOneTemp);
+        $("#hum-one").text("Humidity: "+dayOneHum+"%");
+        $("#icon-one").attr("src", dayOneIconURL);
         //Day 2 elements
-        $("#temp-2").text("Temp: "+dayTwoTemp);
-        $("#hum-2").text("Humidity: "+dayTwoHum+"%");
-        $("#icon-2").attr("src", dayTwoIconURL);
+        $("#temp-two").text("Temp: "+dayTwoTemp);
+        $("#hum-two").text("Humidity: "+dayTwoHum+"%");
+        $("#icon-two").attr("src", dayTwoIconURL);
         // Day 3 elements
-        $("#temp-3").text("Temp: "+dayThreeTemp);
-        $("#hum-3").text("Humidity: "+dayThreeHum+"%");
-        $("#icon-3").attr("src", dayThreeIconURL);
+        $("#temp-three").text("Temp: "+dayThreeTemp);
+        $("#hum-three").text("Humidity: "+dayThreeHum+"%");
+        $("#icon-three").attr("src", dayThreeIconURL);
         // Day 4 elements
-        $("#temp-4").text("Temp: "+dayFourTemp);
-        $("#hum-4").text("Humidity: "+dayFourHum+"%");
-        $("#icon-4").attr("src", dayFourIconURL);
+        $("#temp-four").text("Temp: "+dayFourTemp);
+        $("#hum-four").text("Humidity: "+dayFourHum+"%");
+        $("#icon-four").attr("src", dayFourIconURL);
         //Day 5 elements
-        $("#temp-5").text("Temp: "+dayFiveTemp);
-        $("#hum-5").text("Humidity: "+dayFiveHum+"%");
-        $("#icon-5").attr("src", dayFiveIconURL);
+        $("#temp-five").text("Temp: "+dayFiveTemp);
+        $("#hum-five").text("Humidity: "+dayFiveHum+"%");
+        $("#icon-five").attr("src", dayFiveIconURL);
       });
     });
   }
