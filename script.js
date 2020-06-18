@@ -1,5 +1,7 @@
 $(document).ready(function () {
-  var searchCity = 'atlanta'; // $.trim("#search-city").val();
+// 
+
+  var searchCity = 'atlanta';
   var queryURL =
     'https://api.openweathermap.org/data/2.5/weather?q=' +
     searchCity +
