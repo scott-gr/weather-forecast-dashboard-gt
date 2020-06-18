@@ -1,0 +1,17 @@
+#cityPrompt {
+  margin-left: 50px;
+  max-width: fit-content;
+}
+
+.searches {
+  margin-top: 50px;
+}
+
+#searchBtn {
+  margin-top: 8px;
+  width: 100%;
+}
+
+.navbar-brand {
+  text-align: center;
+}
