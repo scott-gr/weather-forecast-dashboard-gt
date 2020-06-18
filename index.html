@@ -34,18 +34,23 @@
       </div>
       <div class="col-sm-10 results">
         <div class='jumbotron'>
-          <h4 class="display-4">Today Date</h4>
+          <h1 class="city-name" id='today-date'></h4><img src='' id = 'icon-today'>
+          <br>
+          <p id = 'temp-today'></p>
+          <p id = 'hum-today'></p>
+          <p id = 'winds-today'></p>
+          <p id = 'uv-today'></p>
         </div>
         <!--today's forecast elements appear here-->
         <!--5 day forecast-->
-        <div class='row'>
+        <div class='row' id="five-day-header">
           <h4> Five Day Forecast</h4>
         </div>
         <div class="row">
           <div class="col">
             <div class="card text-white bg-primary mb-3">
               <div class="card-body">
-                <h5 class="card-title day-one">Day 1</h5>
+                <h5 class="card-title" id= "day-one"></h5>
                 <p class="temp-1">Some quick example text to build on the card title and make up the bulk of the
                   card's content.</p>
               </div>
@@ -54,7 +59,7 @@
           <div class="col">
             <div class="card text-white bg-primary mb-3">
               <div class="card-body">
-                <h5 class="card-title day-two">Day 2</h5>
+                <h5 class="card-title" id= "day-two"></h5>
                 <p id="temp-2">Some quick example text to build on the card title and make up the bulk of the
                   card's content.</p>
               </div>
@@ -63,7 +68,7 @@
           <div class="col">
             <div class="card text-white bg-primary mb-3">
               <div class="card-body">
-                <h5 class="card-title day-three">Day 3</h5>
+                <h5 class="card-title" id = "day-three"></h5>
                 <p id="temp-3">Some quick example text to build on the card title and make up the bulk of the
                   card's content.</p>
               </div>
@@ -72,7 +77,7 @@
           <div class="col">
             <div class="card text-white bg-primary mb-3">
               <div class="card-body">
-                <h5 class="card-title day-four">Day 4</h5>
+                <h5 class="card-title" id= "day-four"></h5>
                 <p class="temp-4">Some quick example text to build on the card title and make up the bulk of the
                   card's content.</p>
               </div>
@@ -81,7 +86,7 @@
           <div class="col">
             <div class="card text-white bg-primary mb-3">
               <div class="card-body">
-                <h5 class="card-title day-five">Day 5</h5>
+                <h5 class="card-title" id= 'day-five'></h5>
                 <p class="temp-5">Some quick example text to build on the card title and make up the bulk of the
                   card's content.</p>
               </div>
@@ -97,6 +102,8 @@
       integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <!--javascript file-->
     <script type='text/javascript' src='script.js'></script>
+    <!-- moment script-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 
 </body>
 

@@ -20,3 +20,18 @@
   width: 100%;
   margin-top: 80px;
 }
+
+#five-day-header {
+  margin-left: auto;
+}
+
+.card-body {
+  padding: 3px;
+  padding-top: 0;
+  width: fit-content;
+  margin: 5px;
+}
+
+.jumbotron {
+  padding: 35px;
+}
