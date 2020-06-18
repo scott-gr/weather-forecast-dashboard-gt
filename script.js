@@ -9,19 +9,30 @@ $(document).ready(function () {
       searchCity +
       "&units=imperial&appid=" +
       apiKey;
+  $.ajax({
+    url: queryURL,
+    method: 'GET',
+  }).then(function (response) {
+    // console.log(response);
+    //Weather data points from api - to be assigned to text in 'Today' element
+    var tempToday = response.main.temp;
+    var humToday = response.main.humidity;
+    var windsToday = response.main.wind.speed;
+    var iconToday = response.weather[0].icon;
+    var iconTodayUrl = "http://openweathermap.org/img/w/" + iconcode + ".png";
+    var latToday = response.coord.lat;
+    var lonToday = response.coord.lon;
+
+
+
+    
+
+  });
+});
+
 // 5 day forecast queury and key
     // var queryfiveURL =
     //   "https://api.openweathermap.org/data/2.5/forecast?q=" +
     //   searchCity +
     //   "&units=imperial&appid=" +
     //   apiKey;
-  $.ajax({
-    url: queryURL,
-    method: 'GET',
-  }).then(function (response) {
-
-
-    
-    console.log(response);
-  });
-});
