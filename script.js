@@ -7,8 +7,14 @@ $(document).ready(function () {
   var queryURL =
     'https://api.openweathermap.org/data/2.5/weather?q=' +
     searchCity +
-    '&units=imperial&appid=' +
-    apiKey;
+    '&units=imperial&appid=' +apiKey;
+  
+    // 5 day forecast queury and key
+  var queryfiveURL =
+  "https://api.openweathermap.org/data/2.5/forecast?q=" +
+  searchCity +
+  "&units=imperial&appid=" +apiKey;
+
   //today's date, to be displayed at top of Today element
   function getForecast(searchCity) {
     var dateToday = moment().format('M/D/YYYY'); //id is #today-date
@@ -34,7 +40,7 @@ $(document).ready(function () {
       $('#winds-today').text('Wind: ' + windsToday + ' mph');
       $('#icon-today').attr('src', iconTodayUrl);
 
-
+// using moment script to advance calendar for 5 day forecast
       var dayOne = moment().add(1, 'days');
       dayOne = dayOne.format("M/D/YYYY");
       $('#day-one').text(dayOne);
@@ -54,14 +60,44 @@ $(document).ready(function () {
       var dayFive = moment().add(5, 'days');
       dayFive = dayFive.format("M/D/YYYY");
       $('#day-five').text(dayFive);
+// seperate ajax call for five day forecast query
+      $.ajax({
+        url: queryfiveURL,
+        method: "GET",
+      }).then(function (response) {
+        // console.log(response);
+        //variables for each piece of data
+        ///Day 1
+        var dayOneTemp = response.list[3].main.temp;
+        var dayOneHum = response.list[3].main.humidity;
+        var dayOneIcon = response.list[3].weather[0].icon;
+        var dayOneIconURL = "http://openweathermap.org/img/w/" + dayOneIconCode + ".png";
+        /// Day 2
+        var dayTwoTemp = response.list[11].main.temp;
+        var dayTwoHum = response.list[11].main.humidity;
+        var dayTwoIcon = response.list[11].weather[0].icon;
+        var dayTwoIconURL = "http://openweathermap.org/img/w/" + dayTwoIconCode + ".png";
+       //// Day 3
+        var dayThreeTemp = response.list[19].main.temp;
+        var dayThreeHum = response.list[19].main.humidity;
+        var dayThreeIcon = response.list[19].weather[0].icon;
+        var dayThreeIconURL = "http://openweathermap.org/img/w/" + dayThreeIconCode + ".png";
+        /// Day 4
+        var dayFourTemp = response.list[27].main.temp;
+        var dayFourHum = response.list[27].main.humidity;
+        var dayFourIcon = response.list[27].weather[0].icon;
+        var dayFourIconURL = "http://openweathermap.org/img/w/" + dayFourIconCode + ".png";
+        //// Day 5
+        var dayFiveTemp = response.list[35].main.temp;
+        var dayFiveHum = response.list[35].main.humidity;
+        var dayFiveIconC = response.list[35].weather[0].icon;
+        var dayFiveIconURL = "http://openweathermap.org/img/w/" + dayFiveIconCode + ".png";
+    
+
+      });
     });
   }
   getForecast();
 });
 
-// 5 day forecast queury and key
-// var queryfiveURL =
-//   "https://api.openweathermap.org/data/2.5/forecast?q=" +
-//   searchCity +
-//   "&units=imperial&appid=" +
-//   apiKey;
+
