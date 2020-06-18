@@ -9,6 +9,8 @@ $(document).ready(function () {
       searchCity +
       "&units=imperial&appid=" +
       apiKey;
+      //today's date, to be displayed at top of Today element
+    var dateToday = moment().format('(M/D/YYYY'); //id is #today-date
   $.ajax({
     url: queryURL,
     method: 'GET',
