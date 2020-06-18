@@ -1,7 +1,7 @@
 $(document).ready(function () {
   //
 
-  var searchCity = 'atlanta'; // change city to test
+  var searchCity = '#search-city'; // change city to test
   var apiKey = '1935f5d7d75a269680ddfadd7b264dcb';
   // today forecast query and api key
   var queryURL =
