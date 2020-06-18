@@ -22,7 +22,7 @@ $(document).ready(function () {
       var humToday = response.main.humidity;
       var windsToday = response.wind.speed;
       var iconToday = response.weather[0].icon;
-      // var iconTodayUrl = "http://openweathermap.org/img/w/" + iconcode + ".png";
+      var iconTodayUrl = "http://openweathermap.org/img/w/" + iconToday + ".png";
       // // latitude and longitude needed for UV Index
       // var latToday = response.coord.lat;
       // var lonToday = response.coord.lon;
@@ -31,7 +31,7 @@ $(document).ready(function () {
       $('#temp-today').text('Temperature: ' + tempToday + ' F');
       $('#hum-today').text('Humidity: ' + humToday + '%');
       $('#winds-today').text('Wind: ' + windsToday + ' mph');
-      // $("#icon-today").attr("src", iconToday);
+      $("#icon-today").attr("src", iconTodayUrl);
     });
   }
   getForecast();
